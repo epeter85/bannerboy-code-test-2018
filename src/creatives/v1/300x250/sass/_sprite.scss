@@ -1,0 +1,108 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-bottle_batman {
+  background-image: url(sprite.png);
+  background-position: -158px -750px;
+  width: 126px;
+  height: 217px;
+}
+.icon-bottle_hello_kitty {
+  background-image: url(sprite.png);
+  background-position: -284px -750px;
+  width: 114px;
+  height: 199px;
+}
+.icon-bottle_trolls {
+  background-image: url(sprite.png);
+  background-position: 0px -750px;
+  width: 158px;
+  height: 275px;
+}
+.icon-copyright {
+  background-image: url(sprite.png);
+  background-position: -300px -250px;
+  width: 300px;
+  height: 250px;
+}
+.icon-cta {
+  background-image: url(sprite.png);
+  background-position: -612px 0px;
+  width: 300px;
+  height: 250px;
+}
+.icon-halo {
+  background-image: url(sprite.png);
+  background-position: -612px -250px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-batman {
+  background-image: url(sprite.png);
+  background-position: 0px -500px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-complete {
+  background-image: url(sprite.png);
+  background-position: -312px 0px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-for-kids {
+  background-image: url(sprite.png);
+  background-position: -600px -500px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-gummies {
+  background-image: url(sprite.png);
+  background-position: -912px 0px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-hello-kitty {
+  background-image: url(sprite.png);
+  background-position: -912px -250px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-introducing {
+  background-image: url(sprite.png);
+  background-position: -912px -500px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-one-a-day {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 312px;
+  height: 250px;
+}
+.icon-title-trolls {
+  background-image: url(sprite.png);
+  background-position: 0px -250px;
+  width: 300px;
+  height: 250px;
+}
+.icon-title-with-bones {
+  background-image: url(sprite.png);
+  background-position: -300px -500px;
+  width: 300px;
+  height: 250px;
+}
