@@ -83,7 +83,7 @@ function addSprite(className) {
     div.setAttribute('class', className);
     div.style.position = "absolute";
     div.style.overflow = "hidden";
-    stage.appendChild(div);
+    //stage.appendChild(div);
     return div;
 }
 
@@ -108,10 +108,10 @@ function preInit() {
  * The Enabler is now initialized and any extra modules have been loaded.
  */
 function initDom() {
-    
+
     //add elements to dom
     mainInit();
-    
+
 
   // Wait for the page to load (also known as polite loading).
   if (Enabler.isPageLoaded()) {

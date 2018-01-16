@@ -16,10 +16,18 @@ function mainInit() {
     stage.style.border = '1px solid black';
 
     //template
-    template = generateSprite('backup.jpg');
+    template = generateSprite('template/template_300x250_1.jpg');
+    stage.appendChild(template);
 
-    test = addSprite('icon-bottle_batman');
-    background = addSprite('background');
+    //frame01
+    mc_side = generateContainer();
+    mc_side_front_light = addSprite();
+
+    stage.appendChild(car_side);
+
+
+    //test = addSprite('icon-bottle_batman');
+    //background = addSprite('background');
 
     /*test = generateSprite(sparkle_small_1_1);
     stage.appendChild(test);

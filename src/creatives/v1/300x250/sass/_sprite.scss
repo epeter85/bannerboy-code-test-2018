@@ -16,93 +16,57 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-bottle_batman {
+.icon-cta_arrow1 {
   background-image: url(sprite.png);
-  background-position: -158px -750px;
-  width: 126px;
-  height: 217px;
+  background-position: -807px -1000px;
+  width: 14px;
+  height: 15px;
 }
-.icon-bottle_hello_kitty {
+.icon-cta_copy {
   background-image: url(sprite.png);
-  background-position: -284px -750px;
-  width: 114px;
-  height: 199px;
+  background-position: -600px -1000px;
+  width: 207px;
+  height: 23px;
 }
-.icon-bottle_trolls {
-  background-image: url(sprite.png);
-  background-position: 0px -750px;
-  width: 158px;
-  height: 275px;
-}
-.icon-copyright {
-  background-image: url(sprite.png);
-  background-position: -300px -250px;
-  width: 300px;
-  height: 250px;
-}
-.icon-cta {
-  background-image: url(sprite.png);
-  background-position: -612px 0px;
-  width: 300px;
-  height: 250px;
-}
-.icon-halo {
-  background-image: url(sprite.png);
-  background-position: -612px -250px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-batman {
-  background-image: url(sprite.png);
-  background-position: 0px -500px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-complete {
-  background-image: url(sprite.png);
-  background-position: -312px 0px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-for-kids {
-  background-image: url(sprite.png);
-  background-position: -600px -500px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-gummies {
-  background-image: url(sprite.png);
-  background-position: -912px 0px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-hello-kitty {
-  background-image: url(sprite.png);
-  background-position: -912px -250px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-introducing {
-  background-image: url(sprite.png);
-  background-position: -912px -500px;
-  width: 300px;
-  height: 250px;
-}
-.icon-title-one-a-day {
+.icon-fr1_copy_a {
   background-image: url(sprite.png);
   background-position: 0px 0px;
-  width: 312px;
-  height: 250px;
+  width: 600px;
+  height: 500px;
 }
-.icon-title-trolls {
+.icon-fr1_copy_b {
   background-image: url(sprite.png);
-  background-position: 0px -250px;
-  width: 300px;
-  height: 250px;
+  background-position: -600px 0px;
+  width: 600px;
+  height: 500px;
 }
-.icon-title-with-bones {
+.icon-mcSide_front_light {
   background-image: url(sprite.png);
-  background-position: -300px -500px;
-  width: 300px;
-  height: 250px;
+  background-position: 0px -500px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mcSide_main {
+  background-image: url(sprite.png);
+  background-position: -600px -500px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mcSide_rear_light {
+  background-image: url(sprite.png);
+  background-position: -1200px 0px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mcSide_shadows {
+  background-image: url(sprite.png);
+  background-position: -1200px -500px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_logo_sm_300x250 {
+  background-image: url(sprite.png);
+  background-position: 0px -1000px;
+  width: 600px;
+  height: 500px;
 }
