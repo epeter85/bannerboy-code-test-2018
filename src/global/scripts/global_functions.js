@@ -75,15 +75,22 @@ function generateContainer(contWidth, contHeight) {
     }
     div.style.position = "absolute";
     div.style.overflow = "hidden";
+    //div.style.opacity = '1';
     return div;
 }
 
-function addSprite(className) {
+//add png sprite to stage or parent
+function addSprite(className, parentDiv) {
     var div = document.createElement("div");
     div.setAttribute('class', className);
     div.style.position = "absolute";
     div.style.overflow = "hidden";
-    //stage.appendChild(div);
+    if (parentDiv == null) {
+        stage.appendChild(div);
+    }
+    else {
+        parentDiv.appendChild(div);
+    }
     return div;
 }
 

@@ -16,96 +16,165 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-bottle_batman {
+.icon-cta_arrow1 {
   background-image: url(sprite.png);
-  background-position: -158px -750px;
-  width: 126px;
-  height: 217px; }
+  background-position: -1553px -1500px;
+  width: 14px;
+  height: 15px; }
 
-.icon-bottle_hello_kitty {
+.icon-cta_copy {
   background-image: url(sprite.png);
-  background-position: -284px -750px;
-  width: 114px;
-  height: 199px; }
+  background-position: -1346px -1500px;
+  width: 207px;
+  height: 23px; }
 
-.icon-bottle_trolls {
-  background-image: url(sprite.png);
-  background-position: 0px -750px;
-  width: 158px;
-  height: 275px; }
-
-.icon-copyright {
-  background-image: url(sprite.png);
-  background-position: -300px -250px;
-  width: 300px;
-  height: 250px; }
-
-.icon-cta {
-  background-image: url(sprite.png);
-  background-position: -612px 0px;
-  width: 300px;
-  height: 250px; }
-
-.icon-halo {
-  background-image: url(sprite.png);
-  background-position: -612px -250px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-batman {
-  background-image: url(sprite.png);
-  background-position: 0px -500px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-complete {
-  background-image: url(sprite.png);
-  background-position: -312px 0px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-for-kids {
-  background-image: url(sprite.png);
-  background-position: -600px -500px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-gummies {
-  background-image: url(sprite.png);
-  background-position: -912px 0px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-hello-kitty {
-  background-image: url(sprite.png);
-  background-position: -912px -250px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-introducing {
-  background-image: url(sprite.png);
-  background-position: -912px -500px;
-  width: 300px;
-  height: 250px; }
-
-.icon-title-one-a-day {
+.icon-fr1_copy_a {
   background-image: url(sprite.png);
   background-position: 0px 0px;
-  width: 312px;
-  height: 250px; }
+  width: 600px;
+  height: 500px; }
 
-.icon-title-trolls {
+.icon-fr1_copy_b {
   background-image: url(sprite.png);
-  background-position: 0px -250px;
-  width: 300px;
-  height: 250px; }
+  background-position: -600px -1000px;
+  width: 600px;
+  height: 500px; }
 
-.icon-title-with-bones {
+.icon-fr2_copy_a {
   background-image: url(sprite.png);
-  background-position: -300px -500px;
-  width: 300px;
-  height: 250px; }
+  background-position: 0px -500px;
+  width: 600px;
+  height: 500px; }
 
-.background {
-  width: 300px;
-  height: 250px; }
+.icon-fr2_copy_b {
+  background-image: url(sprite.png);
+  background-position: -600px -500px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mcSide_front_light {
+  background-image: url(sprite.png);
+  background-position: -1200px 0px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mcSide_main {
+  background-image: url(sprite.png);
+  background-position: -1200px -500px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mcSide_rear_light {
+  background-image: url(sprite.png);
+  background-position: 0px -1000px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mcSide_shadows {
+  background-image: url(sprite.png);
+  background-position: -600px 0px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mini_interactive_btn_blue {
+  background-image: url(sprite.png);
+  background-position: -1426px -1523px;
+  width: 40px;
+  height: 40px; }
+
+.icon-mini_interactive_btn_orange {
+  background-image: url(sprite.png);
+  background-position: -1346px -1523px;
+  width: 40px;
+  height: 40px; }
+
+.icon-mini_interactive_btn_red {
+  background-image: url(sprite.png);
+  background-position: -1386px -1523px;
+  width: 40px;
+  height: 40px; }
+
+.icon-mini_interactive_car_body {
+  background-image: url(sprite.png);
+  background-position: -1800px 0px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mini_interactive_paint_orange {
+  background-image: url(sprite.png);
+  background-position: -1800px -500px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mini_interactive_paint_red {
+  background-image: url(sprite.png);
+  background-position: -1800px -1000px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mini_interative_title {
+  background-image: url(sprite.png);
+  background-position: 0px -1500px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mini_logo_lg {
+  background-image: url(sprite.png);
+  background-position: -600px -1500px;
+  width: 600px;
+  height: 500px; }
+
+.icon-mini_logo_sm {
+  background-image: url(sprite.png);
+  background-position: -1200px -1000px;
+  width: 600px;
+  height: 500px; }
+
+.icon-wheel_spin {
+  background-image: url(sprite.png);
+  background-position: -1273px -1500px;
+  width: 73px;
+  height: 72px; }
+
+.icon-wheel_stopped {
+  background-image: url(sprite.png);
+  background-position: -1200px -1500px;
+  width: 73px;
+  height: 72px; }
+
+.icon-mini_interative_title,
+.icon-mini_interactive_paint_red,
+.icon-mini_interactive_paint_orange,
+.icon-mini_interactive_car_body,
+.icon-mini_logo_lg,
+.icon-fr2_copy_b,
+.icon-fr2_copy_a,
+.icon-mini_logo_sm,
+.icon-mcSide_main,
+.icon-mcSide_shadows,
+.icon-mcSide_front_light,
+.icon-mcSide_rear_light,
+.icon-fr1_copy_a,
+.icon-fr1_copy_b {
+  -ms-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  top: -125px;
+  left: -150px; }
+
+
+.icon-cta_arrow1,
+.icon-cta_arrow2,
+.icon-cta_copy,
+.icon-wheel_spin,
+.icon-wheel_stopped,
+.icon-mini_interactive_btn_blue,
+.icon-mini_interactive_btn_red,
+.icon-mini_interactive_btn_orange {
+  -ms-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5); }

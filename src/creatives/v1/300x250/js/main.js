@@ -16,44 +16,151 @@ function mainInit() {
     stage.style.border = '1px solid black';
 
     //template
-    template = generateSprite('template/template_300x250_1.jpg');
-    stage.appendChild(template);
+    //template = generateSprite('template/template_300x250_5.jpg');
 
-    //frame01
-    mc_side = generateContainer();
-    mc_side_front_light = addSprite();
+    //Backgrounds
+    black_bkgrnd = generateContainer();
+    black_bkgrnd.style.backgroundColor = '#000000';
 
-    stage.appendChild(car_side);
+    blue_bkgrnd = generateContainer();
+    blue_bkgrnd.style.backgroundColor = '#07a2d4';
+
+    orange_bkgrnd = generateContainer();
+    orange_bkgrnd.style.backgroundColor = '#dd8601';
+
+    red_bkgrnd = generateContainer();
+    red_bkgrnd.style.backgroundColor = '#93121b';
+
+    blue_logo_lockup_trim = generateContainer(dimensions.width-2, dimensions.height-2);
+    blue_logo_lockup_trim.style.border = '8px solid #07a2d4';
+
+    stage.appendChild(black_bkgrnd);
+    stage.appendChild(blue_bkgrnd);
+    stage.appendChild(orange_bkgrnd);
+    stage.appendChild(red_bkgrnd);
 
 
-    //test = addSprite('icon-bottle_batman');
-    //background = addSprite('background');
+    //MiniCooper Side view
+    ///////
+        //main car body
+    minicoop_main = generateContainer();
+    minicoop_shadows = addSprite('icon-mcSide_shadows', minicoop_main);
+    minicoop_car_body = addSprite('icon-mcSide_main', minicoop_main);
 
-    /*test = generateSprite(sparkle_small_1_1);
-    stage.appendChild(test);
+        //lights
+    minicoop_headlights = addSprite('icon-mcSide_front_light', minicoop_main);
+    minicoop_rearlights = addSprite('icon-mcSide_rear_light', minicoop_main);
 
-    stage.style.backgroundColor = 'black';*/
-  //  test.style.opacity = 1;
-   // background.style.opacity = 1;
+        //front tire
+    minicoop_frt_tire = generateContainer('73', '72');
+    minicoop_frt_tire_spin = addSprite('icon-wheel_spin', minicoop_frt_tire)
+    minicoop_frt_tire_stopped = addSprite('icon-wheel_stopped', minicoop_frt_tire)
+    minicoop_main.appendChild(minicoop_frt_tire);
+    minicoop_frt_tire.style.left = '26px';
+    minicoop_frt_tire.style.bottom = '44px';
+        //rear tire
+    minicoop_rear_tire = generateContainer('73', '72');
+    minicoop_rear_tire_spin = addSprite('icon-wheel_spin', minicoop_rear_tire)
+    minicoop_rear_tire_stopped  = addSprite('icon-wheel_stopped', minicoop_rear_tire)
+    minicoop_main.appendChild(minicoop_rear_tire);
+    minicoop_rear_tire.style.right = '27px';
+    minicoop_rear_tire.style.bottom = '44px';
 
+    stage.appendChild(minicoop_main);
 
-    stage.addEventListener('click', exitClickHandler);
+    //Global copy
+    fr1_copy_a = addSprite('icon-fr1_copy_a');
+    fr1_copy_b = addSprite('icon-fr1_copy_b');
+    fr2_copy_a = addSprite('icon-fr2_copy_a');
+    fr2_copy_b = addSprite('icon-fr2_copy_b');
 
+    //Interactive ASSETS
+        //Car body + colors
+    mini_interactive_main = generateContainer();
+    mini_interactive_car_body = addSprite('icon-mini_interactive_car_body', mini_interactive_main);
+    mini_interactive_paint_orange = addSprite('icon-mini_interactive_paint_orange', mini_interactive_main);
+    mini_interactive_paint_red = addSprite('icon-mini_interactive_paint_red', mini_interactive_main);
+    mini_interative_title = addSprite('icon-mini_interative_title ', mini_interactive_main);
+    stage.appendChild(mini_interactive_main);
 
-    //add sprites and containers to stage
+        //color buttons
+    mini_interactive_btns_main = generateContainer();
+    mini_interactive_btn_blue = addSprite('icon-mini_interactive_btn_blue', mini_interactive_btns_main);
+    mini_interactive_btn_orange = addSprite('icon-mini_interactive_btn_orange', mini_interactive_btns_main);
+    mini_interactive_btn_red = addSprite('icon-mini_interactive_btn_red', mini_interactive_btns_main);
+    mini_interactive_btn_orange.style.left = '27px';
+    mini_interactive_btn_red.style.left = '54px';
+    stage.appendChild(mini_interactive_btns_main);
+    mini_interactive_btns_main.style.top = '10px';
+    mini_interactive_btns_main.style.left = '135px';
 
-    //init();
+    stage.appendChild(blue_logo_lockup_trim);
+
+    //logos
+    logo_small = addSprite('icon-mini_logo_sm');
+    logo_large = addSprite('icon-mini_logo_lg');
+
+    //CTA
+    cta_bkgrnd = generateContainer('145', '31');
+    cta_bkgrnd.style.backgroundColor = 'black';
+    cta_bkgrnd.style.left = '10px';
+    cta_bkgrnd.style.bottom = '8px';
+    arrow1 = addSprite('icon-cta_arrow1', cta_bkgrnd);
+    arrow1.style.left = '5px';
+    arrow1.style.bottom = '8px';
+    arrow2 = addSprite('icon-cta_arrow1', cta_bkgrnd);
+    arrow2.style.left = '10px';
+    arrow2.style.bottom = '8px';
+    cta_copy = addSprite('icon-cta_copy', cta_bkgrnd)
+    cta_copy.style.left = '-24px';
+    cta_copy.style.bottom = '4px';
+    stage.appendChild(cta_bkgrnd);
+
+    //stage.appendChild(template);
 
 }
 
 function init() {
 
-    //set init placement
+    //set event listeners
+    stage.addEventListener('click', exitClickHandler);
+    cta_bkgrnd.addEventListener('mouseenter', ctaAnimationOver);
+    cta_bkgrnd.addEventListener('mouseleave', ctaAnimationOut);
+    cta_bkgrnd.style.cursor = 'pointer';
 
+    mini_interactive_btn_blue.addEventListener('click', bodyColorHandler);
+    mini_interactive_btn_orange.addEventListener('click', bodyColorHandler);
+    mini_interactive_btn_red.addEventListener('click', bodyColorHandler);
+    mini_interactive_btn_blue.style.zIndex = 10;
+    mini_interactive_btn_orange.style.zIndex = 10;
+    mini_interactive_btn_red.style.zIndex = 10;
+    mini_interactive_btn_blue.style.cursor = 'pointer';
+    mini_interactive_btn_orange.style.cursor = 'pointer';
+    mini_interactive_btn_red.style.cursor = 'pointer';
+    mini_interactive_btn_blue.style.border = '2px solid #ffffff';
+
+    //set init placement
+    TweenLite.set(fr2_copy_a, {css: {left: dimensions.width}});
+    TweenLite.set(fr2_copy_b, {css: {left: dimensions.width}});
 
     //set init visibility
-    template.style.opacity = 1;
+    //template.style.opacity = .5;
 
+    logo_small.style.opacity = 0;
+    logo_large.style.opacity = 0;
+    cta_bkgrnd.style.opacity = 0;
+    blue_logo_lockup_trim.style.opacity = 0;
+
+    orange_bkgrnd.style.opacity = 0;
+    red_bkgrnd.style.opacity = 0;
+    mini_interactive_main.style.opacity = 0;
+
+    minicoop_headlights.style.opacity = 0;
+    minicoop_rearlights.style.opacity = 0;
+
+    mini_interactive_btns_main.style.opacity = 0;
+    mini_interactive_paint_orange.style.opacity = 0;
+    mini_interactive_paint_red.style.opacity = 0;
 
     //set listeners
 
@@ -64,14 +171,10 @@ function init() {
 function frame00() {
 
     stopWatch = new Date().getTime();
-
     stage.style.display = 'block';
 
-    var twnDelay = .5;
-
+    var twnDelay = 0;
     TweenLite.to(stage, .25, {delay: twnDelay, opacity: 1});
-
-
     TweenLite.delayedCall(twnDelay, frame01);
 
 }
@@ -79,9 +182,344 @@ function frame00() {
 function frame01() {
 
     var twnDelay = 0;
+    var carSpeed = 1.25;
 
     twnDelay += .25;
 
-    //TweenLite.delayedCall(twnDelay, toggleISI);
+    minicoop_main.tireRotation = 0;
+
+    TweenLite.from(minicoop_main, carSpeed, {
+        x: -dimensions.width,
+        ease: Expo.easeOut,
+        delay: twnDelay,
+        tireRotation: 4,
+        onUpdate: rotateTires,
+        onUpdateParams:[minicoop_main]
+    });
+
+    TweenLite.from(fr1_copy_a, carSpeed, {
+        x: -dimensions.width,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    TweenLite.from(fr1_copy_b, carSpeed, {
+        x: -dimensions.width,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    twnDelay += 1;
+
+    TweenLite.to(logo_small, 1, {delay: twnDelay, opacity: 1});
+    TweenLite.to(cta_bkgrnd, 1, {delay: twnDelay, opacity: 1});
+
+    twnDelay += 1.25;
+
+    TweenLite.delayedCall(twnDelay, frame02);
+
+}
+
+function frame02() {
+
+    var twnDelay = 0;
+    var carSpeed = 2;
+
+    fr1_copy_a.tireRotation = 0;
+
+    TweenLite.to(fr1_copy_a, carSpeed, {
+        x: -dimensions.height,
+        ease: Expo.easeIn,
+        delay: twnDelay,
+        tireRotation: 10,
+        onUpdate: rotateTires,
+        onUpdateParams:[fr1_copy_a],
+        onComplete: startSpin
+    });
+
+    TweenLite.to(fr1_copy_b, carSpeed, {
+        x: -dimensions.height,
+        ease: Expo.easeIn,
+        delay: twnDelay
+    });
+
+    twnDelay += .75;
+
+    TweenLite.to(minicoop_frt_tire_stopped, .25, {
+        opacity: 0,
+        delay: twnDelay
+    });
+
+    TweenLite.to(minicoop_rear_tire_stopped, .25, {
+        opacity: 0,
+        delay: twnDelay
+    });
+
+    TweenLite.to(minicoop_headlights, 1, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    TweenLite.to(minicoop_rearlights, 1, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    TweenLite.to(orange_bkgrnd, 4, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    twnDelay += 1;
+
+    TweenLite.delayedCall(twnDelay, frame03);
+
+}
+
+function frame03() {
+
+    var twnDelay = 0;
+    var carSpeed = 1;
+
+    TweenLite.to(fr2_copy_a, carSpeed, {
+        left: -dimensions.width/2,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    TweenLite.to(fr2_copy_b, carSpeed, {
+        left: -dimensions.width/2,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    twnDelay += 2;
+
+    TweenLite.to(red_bkgrnd, 4, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    twnDelay += 2;
+
+    TweenLite.to(fr2_copy_a, carSpeed, {
+        left: -dimensions.width*2,
+        ease: Expo.easeIn,
+        delay: twnDelay
+    });
+
+    TweenLite.to(fr2_copy_b, carSpeed, {
+        left: -dimensions.width*2,
+        ease: Expo.easeIn,
+        delay: twnDelay
+    });
+
+    TweenLite.to(minicoop_main, carSpeed, {
+        x: dimensions.width,
+        ease: Expo.easeIn,
+        delay: twnDelay
+    });
+
+    twnDelay += 1;
+
+    TweenLite.delayedCall(twnDelay, frame04);
+
+}
+
+function frame04() {
+
+    var twnDelay = 0;
+
+    orange_bkgrnd.style.opacity = 0;
+    blue_bkgrnd.style.opacity = 0;
+    logo_large.style.opacity = 1;
+    logo_small.style.opacity = 0;
+
+    TweenLite.to(red_bkgrnd, 1, {
+        opacity: 0,
+        delay: twnDelay
+    });
+
+    TweenLite.to(cta_bkgrnd, .5, {
+        opacity: 0,
+        delay: twnDelay
+    });
+
+    TweenLite.from (logo_large, 1, {
+        scaleX: .15,
+        scaleY: .15,
+        x: 105,
+        y: 95,
+        ease: Power4.easeInOut,
+        delay: twnDelay
+    });
+
+    twnDelay += .5;
+
+    TweenLite.to(blue_logo_lockup_trim, .5, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    twnDelay += 1.5;
+
+    TweenLite.delayedCall(twnDelay, frame05);
+
+
+}
+
+function frame05() {
+
+    logo_large.style.opacity = 1;
+    orange_bkgrnd.style.opacity = 0;
+    blue_bkgrnd.style.opacity = 0;
+    minicoop_main.style.opacity = 0;
+    fr1_copy_a.style.opacity = 0;
+    blue_logo_lockup_trim.style.opacity = 1;
+    fr1_copy_b.style.opacity = 0;
+
+    var twnDelay = 0;
+
+    TweenLite.to (logo_large, 1, {
+        opacity: 0,
+        delay: twnDelay
+    });
+
+    twnDelay += .75;
+
+    TweenLite.to (mini_interactive_main, 1, {
+        opacity: 1,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    TweenLite.to (mini_interactive_btns_main, 1, {
+        opacity: 1,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    TweenLite.to (mini_interactive_btns_main, 1, {
+        opacity: 1,
+        ease: Expo.easeOut,
+        delay: twnDelay
+    });
+
+    TweenLite.to (logo_small, 1, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    TweenLite.to (cta_bkgrnd, 1, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+
+
+}
+
+function startSpin() {
+    var myVar = setInterval(fullSpeed, .1);
+}
+
+function fullSpeed() {
+
+    var rotatePos = Math.random() * (360 - 320) + 320;
+    TweenLite.set(minicoop_frt_tire, {rotation:rotatePos});
+    TweenLite.set(minicoop_rear_tire, {rotation:rotatePos});
+
+}
+
+function rotateTires(obj) {
+
+    var nextRot = -obj.tireRotation * 360;
+
+    TweenLite.set(minicoop_frt_tire, {
+        rotation: nextRot,
+        ease: Linear.easeNone
+    });
+    TweenLite.set(minicoop_rear_tire, {
+        rotation: nextRot,
+        ease: Linear.easeNone
+    });
+}
+
+function ctaAnimationOver(e) {
+
+    var twnDelay = 0;
+
+    TweenLite.to(arrow1, 1, {
+        delay: twnDelay,
+        x:2,
+        ease: Expo.easeOut
+    });
+
+    TweenLite.to(cta_copy, 1, {
+        delay: twnDelay,
+        scaleY: .52,
+        scaleX: .52,
+        ease: Expo.easeOut
+    });
+
+    //twnDelay += .2;
+
+    TweenLite.to(arrow2, 1, {
+        delay: twnDelay,
+        x:2,
+        ease: Expo.easeOut
+    });
+}
+
+function ctaAnimationOut(e) {
+
+    var twnDelay = 0;
+
+    TweenLite.to(arrow1, .5, {
+        delay: twnDelay,
+        x:0,
+        ease: Expo.easeOut
+    });
+    TweenLite.to(arrow2, .5, {
+        delay: twnDelay,
+        x:0,
+        ease: Expo.easeOut
+    });
+    TweenLite.to(cta_copy, .5, {
+        delay: twnDelay,
+        scaleY: .5,
+        scaleX: .5,
+        ease: Expo.easeOut
+    });
+}
+
+function bodyColorHandler(e) {
+
+    event.stopPropagation();
+
+    var currentBtn = e.target.className;
+
+    mini_interactive_btn_blue.style.border = 'none';
+    mini_interactive_btn_orange.style.border = 'none';
+    mini_interactive_btn_red.style.border = 'none';
+
+    switch (currentBtn) {
+        case 'icon-mini_interactive_btn_blue':
+            TweenLite.to (mini_interactive_paint_orange, .5, {opacity: 0});
+            TweenLite.to (mini_interactive_paint_red, .5, {opacity: 0});
+            e.target.style.border = '2px solid #ffffff';
+            break;
+        case 'icon-mini_interactive_btn_orange':
+            TweenLite.to (mini_interactive_paint_orange,.5, {opacity: 1});
+            TweenLite.to (mini_interactive_paint_red, .5, {opacity: 0});
+            e.target.style.border = '2px solid #ffffff';
+            break;
+        case 'icon-mini_interactive_btn_red':
+            TweenLite.to (mini_interactive_paint_orange, .5, {opacity: 0});
+            TweenLite.to (mini_interactive_paint_red, .5, {opacity: 1});
+            e.target.style.border = '2px solid #ffffff';
+            break;
+        }
+
 
 }

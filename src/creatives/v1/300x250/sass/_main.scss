@@ -1,7 +1,46 @@
-.background {
+//transform sprites for retina x2
 
-    //background-color:black;
-    width:300px;
-    height:250px;
+.icon-mini_interative_title,
+.icon-mini_interactive_paint_red,
+.icon-mini_interactive_paint_orange,
+.icon-mini_interactive_car_body,
+.icon-mini_logo_lg,
+.icon-fr2_copy_b,
+.icon-fr2_copy_a,
+.icon-mini_logo_sm,
+.icon-mcSide_main,
+.icon-mcSide_shadows,
+.icon-mcSide_front_light,
+.icon-mcSide_rear_light,
+.icon-fr1_copy_a,
+.icon-fr1_copy_b{
+
+    -ms-transform: scale(.5, .5);
+    -webkit-transform: scale(.5, .5);
+    -moz-transform: scale(.5, .5);
+    -o-transform: scale(.5, .5);
+    transform: scale(.5, .5);
+
+    top:-125px;
+    left:-150px;
 
 }
+
+,
+.icon-cta_arrow1,
+.icon-cta_arrow2,
+.icon-cta_copy,
+.icon-wheel_spin,
+.icon-wheel_stopped,
+.icon-mini_interactive_btn_blue,
+.icon-mini_interactive_btn_red,
+.icon-mini_interactive_btn_orange {
+
+    -ms-transform: scale(.5, .5);
+    -webkit-transform: scale(.5, .5);
+    -moz-transform: scale(.5, .5);
+    -o-transform: scale(.5, .5);
+    transform: scale(.5, .5);
+}
+
+//

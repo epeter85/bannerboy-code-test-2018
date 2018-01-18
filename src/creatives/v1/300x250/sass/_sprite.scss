@@ -18,13 +18,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-cta_arrow1 {
   background-image: url(sprite.png);
-  background-position: -807px -1000px;
+  background-position: -1553px -1500px;
   width: 14px;
   height: 15px;
 }
 .icon-cta_copy {
   background-image: url(sprite.png);
-  background-position: -600px -1000px;
+  background-position: -1346px -1500px;
   width: 207px;
   height: 23px;
 }
@@ -36,37 +36,109 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-fr1_copy_b {
   background-image: url(sprite.png);
-  background-position: -600px 0px;
+  background-position: -600px -1000px;
   width: 600px;
   height: 500px;
 }
-.icon-mcSide_front_light {
+.icon-fr2_copy_a {
   background-image: url(sprite.png);
   background-position: 0px -500px;
   width: 600px;
   height: 500px;
 }
-.icon-mcSide_main {
+.icon-fr2_copy_b {
   background-image: url(sprite.png);
   background-position: -600px -500px;
   width: 600px;
   height: 500px;
 }
-.icon-mcSide_rear_light {
+.icon-mcSide_front_light {
   background-image: url(sprite.png);
   background-position: -1200px 0px;
   width: 600px;
   height: 500px;
 }
-.icon-mcSide_shadows {
+.icon-mcSide_main {
   background-image: url(sprite.png);
   background-position: -1200px -500px;
   width: 600px;
   height: 500px;
 }
-.icon-mini_logo_sm_300x250 {
+.icon-mcSide_rear_light {
   background-image: url(sprite.png);
   background-position: 0px -1000px;
   width: 600px;
   height: 500px;
+}
+.icon-mcSide_shadows {
+  background-image: url(sprite.png);
+  background-position: -600px 0px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_interactive_btn_blue {
+  background-image: url(sprite.png);
+  background-position: -1426px -1523px;
+  width: 40px;
+  height: 40px;
+}
+.icon-mini_interactive_btn_orange {
+  background-image: url(sprite.png);
+  background-position: -1346px -1523px;
+  width: 40px;
+  height: 40px;
+}
+.icon-mini_interactive_btn_red {
+  background-image: url(sprite.png);
+  background-position: -1386px -1523px;
+  width: 40px;
+  height: 40px;
+}
+.icon-mini_interactive_car_body {
+  background-image: url(sprite.png);
+  background-position: -1800px 0px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_interactive_paint_orange {
+  background-image: url(sprite.png);
+  background-position: -1800px -500px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_interactive_paint_red {
+  background-image: url(sprite.png);
+  background-position: -1800px -1000px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_interative_title {
+  background-image: url(sprite.png);
+  background-position: 0px -1500px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_logo_lg {
+  background-image: url(sprite.png);
+  background-position: -600px -1500px;
+  width: 600px;
+  height: 500px;
+}
+.icon-mini_logo_sm {
+  background-image: url(sprite.png);
+  background-position: -1200px -1000px;
+  width: 600px;
+  height: 500px;
+}
+.icon-wheel_spin {
+  background-image: url(sprite.png);
+  background-position: -1273px -1500px;
+  width: 73px;
+  height: 72px;
+}
+.icon-wheel_stopped {
+  background-image: url(sprite.png);
+  background-position: -1200px -1500px;
+  width: 73px;
+  height: 72px;
 }
