@@ -139,6 +139,8 @@ function exitClickHandler() {
  */
 window.addEventListener('load', preInit);
 
+
+
 function mainInit() {
 
     ///////////////////////////////
@@ -303,8 +305,6 @@ function init() {
     mini_interactive_paint_orange.style.opacity = 0;
     mini_interactive_paint_red.style.opacity = 0;
 
-    //set listeners
-
     frame00();
 
 }
@@ -323,7 +323,7 @@ function frame00() {
 function frame01() {
 
     var twnDelay = 0;
-    var carSpeed = 1.25;
+    var carSpeed = 1.5;
 
     twnDelay += .25;
 
@@ -338,19 +338,15 @@ function frame01() {
         onUpdateParams:[minicoop_main]
     });
 
-    TweenLite.from(fr1_copy_a, carSpeed, {
-        x: -dimensions.width,
-        ease: Expo.easeOut,
-        delay: twnDelay
-    });
+    twnDelay += 1.5;
 
-    TweenLite.from(fr1_copy_b, carSpeed, {
-        x: -dimensions.width,
-        ease: Expo.easeOut,
-        delay: twnDelay
-    });
+    TweenLite.from(fr1_copy_a, 1, {opacity:0,
+    delay: twnDelay});
 
-    twnDelay += 1;
+    TweenLite.from(fr1_copy_b, 1, {opacity:0,
+    delay: twnDelay});
+
+    twnDelay += .5;
 
     TweenLite.to(logo_small, 1, {delay: twnDelay, opacity: 1});
     TweenLite.to(cta_bkgrnd, 1, {delay: twnDelay, opacity: 1});
@@ -396,15 +392,7 @@ function frame02() {
         delay: twnDelay
     });
 
-    TweenLite.to(minicoop_headlights, 1, {
-        opacity: 1,
-        delay: twnDelay
-    });
 
-    TweenLite.to(minicoop_rearlights, 1, {
-        opacity: 1,
-        delay: twnDelay
-    });
 
     TweenLite.to(orange_bkgrnd, 4, {
         opacity: 1,
@@ -434,14 +422,14 @@ function frame03() {
         delay: twnDelay
     });
 
-    twnDelay += 2;
+    twnDelay += 2.5;
 
     TweenLite.to(red_bkgrnd, 4, {
         opacity: 1,
         delay: twnDelay
     });
 
-    twnDelay += 2;
+    twnDelay += 2.5;
 
     TweenLite.to(fr2_copy_a, carSpeed, {
         left: -dimensions.width*2,
@@ -455,7 +443,29 @@ function frame03() {
         delay: twnDelay
     });
 
-    TweenLite.to(minicoop_main, carSpeed, {
+    TweenLite.set(blue_bkgrnd,{opacity:0, delay: twnDelay});
+    TweenLite.set(orange_bkgrnd,{opacity:0, delay: twnDelay});
+
+    TweenLite.to(red_bkgrnd, 4, {
+        opacity: 0,
+        delay: twnDelay
+    });
+
+    twnDelay += 1;
+
+    TweenLite.to(minicoop_headlights, 1, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    TweenLite.to(minicoop_rearlights, 1, {
+        opacity: 1,
+        delay: twnDelay
+    });
+
+    twnDelay += 1.5;
+
+    TweenLite.to(minicoop_main, 1, {
         x: dimensions.width,
         ease: Expo.easeIn,
         delay: twnDelay
@@ -471,15 +481,10 @@ function frame04() {
 
     var twnDelay = 0;
 
-    orange_bkgrnd.style.opacity = 0;
-    blue_bkgrnd.style.opacity = 0;
+    //orange_bkgrnd.style.opacity = 0;
+    //blue_bkgrnd.style.opacity = 0;
     logo_large.style.opacity = 1;
     logo_small.style.opacity = 0;
-
-    TweenLite.to(red_bkgrnd, 1, {
-        opacity: 0,
-        delay: twnDelay
-    });
 
     TweenLite.to(cta_bkgrnd, .5, {
         opacity: 0,
@@ -502,7 +507,7 @@ function frame04() {
         delay: twnDelay
     });
 
-    twnDelay += 1.5;
+    twnDelay += 1;
 
     TweenLite.delayedCall(twnDelay, frame05);
 
@@ -511,14 +516,6 @@ function frame04() {
 
 function frame05() {
 
-    logo_large.style.opacity = 1;
-    orange_bkgrnd.style.opacity = 0;
-    blue_bkgrnd.style.opacity = 0;
-    minicoop_main.style.opacity = 0;
-    fr1_copy_a.style.opacity = 0;
-    blue_logo_lockup_trim.style.opacity = 1;
-    fr1_copy_b.style.opacity = 0;
-
     var twnDelay = 0;
 
     TweenLite.to (logo_large, 1, {
@@ -526,7 +523,7 @@ function frame05() {
         delay: twnDelay
     });
 
-    twnDelay += .75;
+    twnDelay += .5;
 
     TweenLite.to (mini_interactive_main, 1, {
         opacity: 1,
@@ -556,12 +553,16 @@ function frame05() {
         delay: twnDelay
     });
 
+    twnDelay += .5;
 
+    TweenLite.delayedCall(twnDelay, returnTimer, ['banner end']);
 
 }
 
 function startSpin() {
     var myVar = setInterval(fullSpeed, .1);
+    //drift
+    TweenLite.to(minicoop_main, 7, { x: -10});
 }
 
 function fullSpeed() {
@@ -569,7 +570,6 @@ function fullSpeed() {
     var rotatePos = Math.random() * (360 - 320) + 320;
     TweenLite.set(minicoop_frt_tire, {rotation:rotatePos});
     TweenLite.set(minicoop_rear_tire, {rotation:rotatePos});
-
 }
 
 function rotateTires(obj) {
@@ -603,7 +603,7 @@ function ctaAnimationOver(e) {
         ease: Expo.easeOut
     });
 
-    //twnDelay += .2;
+    twnDelay += .2;
 
     TweenLite.to(arrow2, 1, {
         delay: twnDelay,
