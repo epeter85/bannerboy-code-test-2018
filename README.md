@@ -1,25 +1,4 @@
 
-
-# Banner Boy - Mini Cooper
-
-This is a test project for Banner Boy. https://bannerboy.com/
-
-## Getting Started
-
-### Prerequisites
-node.js<br>
-gulp.js
-
-### Installing
-After installing Prerequisites
-```
-npm install
-```
-
-## File Structure
-
-
-
 # Banner Boy - Mini Cooper
 
 This is a test project for Banner Boy. https://bannerboy.com/
