@@ -1,7 +1,7 @@
 
-# Banner Boy - Mini Cooper
+# Gulp Banner Workflow
 
-This is a test project for Banner Boy. https://bannerboy.com/
+This is an ongoing project to make banner developement more fluid.
 
 ## Getting Started
 
